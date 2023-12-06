@@ -1,0 +1,15 @@
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.csproj.AssemblyReference.cache
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.AssemblyInfoInputs.cache
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.AssemblyInfo.cs
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.csproj.CoreCompileInputs.cache
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\bin\Debug\net6.0\LevelBuilder.exe
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\bin\Debug\net6.0\LevelBuilder.deps.json
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\bin\Debug\net6.0\LevelBuilder.runtimeconfig.json
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\bin\Debug\net6.0\LevelBuilder.dll
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\bin\Debug\net6.0\LevelBuilder.pdb
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.dll
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\refint\LevelBuilder.dll
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.pdb
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\LevelBuilder.genruntimeconfig.cache
+C:\Users\rodri\Desktop\LevelBuilder\LevelBuilder\LevelBuilder\obj\Debug\net6.0\ref\LevelBuilder.dll
