@@ -3,7 +3,20 @@ guid: 901337bcee02fe74e975908788616aba
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - levelTxt: {fileID: 4900000, guid: 7f88c39a46d45bb4c84487ce310058cd, type: 3}
+  - unbreakBrick: {fileID: 3508772501382536677, guid: 76fd8924d32e1424fa58b394db837173, type: 3}
+  - breakBrick: {fileID: 3508772501382536677, guid: 1982567dadd001f498ad6da26e4180bd, type: 3}
+  - coinQuestion: {fileID: 3508772501382536677, guid: 0068dabad742f7947a8255cbfe881d77, type: 3}
+  - mshrmQuestion: {fileID: 3508772501382536677, guid: bc09e2fbb833cbd40a7c8f4a890d5255, type: 3}
+  - enemy: {fileID: 3508772501382536677, guid: ace715cd47306d948bfdccb3a4fcd788, type: 3}
+  - pipeBodyL: {fileID: 3508772501382536677, guid: b0d16f5be51e0a143aff6e052cfe7cc6, type: 3}
+  - pipeBodyR: {fileID: 3508772501382536677, guid: 31ffbca184b21204393523cd80ee90c8, type: 3}
+  - pipeHeadL: {fileID: 3508772501382536677, guid: 0dc030398c909c547baaadd4c179df83, type: 3}
+  - pipeHeadR: {fileID: 3508772501382536677, guid: 972b99708144a3c49bf0cc7c8382ab47, type: 3}
+  - flag: {fileID: 3508772501382536677, guid: 3ec675ac7a5289b468fe84155bc00fc3, type: 3}
+  - coin: {fileID: 3508772501382536677, guid: ace715cd47306d948bfdccb3a4fcd788, type: 3}
+  - def: {fileID: 3508772501382536677, guid: 9a9c6e2fbaee7c846b1e90a7a6b528ef, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

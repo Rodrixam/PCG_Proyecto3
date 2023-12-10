@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Movement : MonoBehaviour
 {
     Animator anim;
     Rigidbody2D body;
+
+    public LevelGenerator levelGenerator;
 
     [SerializeField] float maxHspeed;
     [SerializeField] float acceleration;
@@ -19,7 +23,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        body = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();  
     }
 
     // Update is called once per frame
@@ -67,6 +71,7 @@ public class Movement : MonoBehaviour
             body.AddForce(Vector2.up * jumpForce);
         }
         #endregion
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -77,4 +82,29 @@ public class Movement : MonoBehaviour
             grounded = true;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            //levelGenerator.GenerateLevel();   ESTO GENERA UN NIVEL SOBRE EL NIVEL Y POS, NO
+
+            SceneManager.LoadScene("SampleScene");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "item")
+        {
+            Destroy(collision.gameObject);
+        }
+
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
 }

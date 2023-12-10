@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] TextAsset levelTxt;
+    [SerializeField] TextAsset levelTxt2;
 
     //OBJETOS
     //Ladrillo Irrompible
@@ -50,8 +51,10 @@ public class LevelGenerator : MonoBehaviour
             GenerateLevel();
         }
     }
+    
 
-    void GenerateLevel()
+
+    public void GenerateLevel()
     {
         int x = 0;
         int y = 14;
