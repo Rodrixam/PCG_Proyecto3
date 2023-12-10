@@ -39,6 +39,7 @@ public class LevelGenerator : MonoBehaviour
     void Start()
     {
         levelObjects = new List<GameObject>();
+        GenerateLevel();
     }
 
     // Update is called once per frame
