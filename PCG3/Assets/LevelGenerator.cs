@@ -48,8 +48,24 @@ public class LevelGenerator : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            EmptyList();
+
             GenerateLevel();
         }
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            EmptyList();
+        }
+    }
+
+    void EmptyList()
+    {
+        foreach (GameObject go in levelObjects)
+        {
+            Destroy(go);
+        }
+        levelObjects = new List<GameObject>();
     }
     
 
