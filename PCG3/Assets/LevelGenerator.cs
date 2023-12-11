@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    [SerializeField] TextAsset levelTxt;
-    [SerializeField] TextAsset levelTxt2;
+    TextAsset levelTxt;
+    [SerializeField] GameObject sky;
 
     //OBJETOS
     //Ladrillo Irrompible
@@ -31,6 +31,10 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] GameObject flag;
     //Moneda
     [SerializeField] GameObject coin;
+    //Bombardero cabeza
+    [SerializeField] GameObject bomberHead;
+    //Bombardero cuerpo
+    [SerializeField] GameObject bomberBody;
     //Default
     [SerializeField] GameObject def;
 
@@ -39,27 +43,10 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelObjects = new List<GameObject>();
         GenerateLevel();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            EmptyList();
-
-            GenerateLevel();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            EmptyList();
-        }
-    }
-
-    void EmptyList()
+    public void EmptyList()
     {
         foreach (GameObject go in levelObjects)
         {
@@ -68,14 +55,16 @@ public class LevelGenerator : MonoBehaviour
         levelObjects = new List<GameObject>();
     }
     
-
-
     public void GenerateLevel()
     {
         int x = 0;
         int y = 14;
 
-        for(int i = 0; i < levelTxt.text.Length; i++)
+        int rowLength = 0;
+
+        EmptyList();
+
+        for (int i = 0; i < levelTxt.text.Length; i++)
         {
             switch (levelTxt.text[i])
             {
@@ -123,6 +112,14 @@ public class LevelGenerator : MonoBehaviour
                 case 'o':
                     levelObjects.Add(Instantiate(coin, new Vector3(x, y), transform.rotation));
                     break;
+                //Moneda
+                case 'B':
+                    levelObjects.Add(Instantiate(bomberHead, new Vector3(x, y), transform.rotation));
+                    break;
+                //Moneda
+                case 'b':
+                    levelObjects.Add(Instantiate(bomberBody, new Vector3(x, y), transform.rotation));
+                    break;
                 //Aire
                 case '-':
                     break;
@@ -130,6 +127,7 @@ public class LevelGenerator : MonoBehaviour
                 case '\n':
                     y--;
                     x = -1;
+                    rowLength = 0;
                     break;
                 //Otros
                 default:
@@ -137,7 +135,16 @@ public class LevelGenerator : MonoBehaviour
                     break;
             }
             x++;
+            rowLength++;
         }
+
+        sky.transform.localScale = new Vector2(levelTxt.text.Length, 15);
+        sky.transform.position = new Vector2(levelTxt.text.Length / 2 - 0.5f, 7);
+    }
+
+    public void SetLevel(TextAsset txt)
+    {
+        levelTxt = txt;
     }
 
 }

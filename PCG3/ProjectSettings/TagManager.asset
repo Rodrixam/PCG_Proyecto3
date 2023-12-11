@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Question
+  - Enemy
+  - item
   layers:
   - Default
   - TransparentFX
@@ -13,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Brick
+  - Enemy
+  - CameraLimit
+  - Points
   - 
   - 
   - 

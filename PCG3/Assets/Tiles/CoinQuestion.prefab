@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7417079927212694895}
   - component: {fileID: -5655381224998472730}
   - component: {fileID: -2777623684569637374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CoinQuestion
   m_TagString: Question
   m_Icon: {fileID: 0}
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26cfabe428db5942b88d3571490b15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prize: {fileID: 3508772501382536677, guid: ace715cd47306d948bfdccb3a4fcd788, type: 3}

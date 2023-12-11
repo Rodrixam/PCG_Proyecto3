@@ -6,6 +6,8 @@ public class GoombaMovement : MonoBehaviour
 {
     Rigidbody2D enemyBody;
 
+    [SerializeField] float velocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,12 @@ public class GoombaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyBody.velocity = Vector2.left;
+        enemyBody.velocity = new Vector2(velocity * transform.localScale.x * -1, enemyBody.velocity.y);
+    }
+
+    public void SetVelocity(float newVel)
+    {
+        velocity = newVel;
     }
 
 }

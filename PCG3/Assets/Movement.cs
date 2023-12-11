@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] GameObject levelController;
+    LevelList levelList;
+
     Animator anim;
     Rigidbody2D body;
-    CapsuleCollider2D bCollider;
-
-    public LevelGenerator levelGenerator;
 
     [SerializeField] float maxHspeed;
     [SerializeField] float maxRunSpeed;
@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
-        bCollider = GetComponent<CapsuleCollider2D>();
+        levelList = levelController.GetComponent<LevelList>();
     }
 
     // Update is called once per frame
@@ -95,116 +95,43 @@ public class Movement : MonoBehaviour
         }
         #endregion
 
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Golpea bloque question por debajo
-        if (collision.gameObject.tag == "Question")
+        if(transform.position.y < -5)
         {
-            BoxCollider2D otherCol = collision.gameObject.GetComponent<BoxCollider2D>();
-
-            bool underBlock = transform.position.y + bCollider.size.y / 2 - 0.1f < collision.gameObject.transform.position.y - otherCol.size.y / 2;
-            bool leftBlockBorder = transform.position.x + bCollider.size.x / 2 > collision.gameObject.transform.position.x - otherCol.size.x / 2;
-            bool rightBlockBorder = transform.position.x - bCollider.size.x / 2 < collision.gameObject.transform.position.x + otherCol.size.x / 2;
-
-            //Debug.Log((transform.position.y + bCollider.size.y / 2 - 0.1f) + " " + (collision.gameObject.transform.position.y - otherCol.size.y / 2));
-
-            if (underBlock && leftBlockBorder && rightBlockBorder)
-            {
-                collision.gameObject.GetComponent<QuestionScript>().Hit();
-            }
-        }
-        /*
-        //Colisionar con bloque por el lado
-        List<string> groundTags = new List<string>() { "Ground", "Question" };
-        if (groundTags.Contains(collision.gameObject.tag) && body.velocity.x != 0)
-        {
-            BoxCollider2D otherCol = collision.gameObject.GetComponent<BoxCollider2D>();
-
-            bool overBlock = transform.position.y - bCollider.size.y / 2 + 0.1f >= collision.gameObject.transform.position.y + otherCol.size.y / 2;
-            bool underBlock = transform.position.y + bCollider.size.y / 2 - 0.1f <= collision.gameObject.transform.position.y - otherCol.size.y / 2;
-
-            if(!overBlock && !underBlock)
-            {
-                Debug.Log("Hey");
-                transform.position = new Vector3(collision.gameObject.transform.position.x + (otherCol.size.x / 2 + bCollider.size.x / 2) * transform.localScale.x * -1, transform.position.y);
-                body.velocity = new Vector2(0, body.velocity.y);
-            }
-        }//*/
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        List<string> groundTags = new List<string>() { "Ground", "Question" };
-
-        //Parado sobre piso
-        if(groundTags.Contains(collision.gameObject.tag))
-        {
-            if (collision.gameObject.transform.position.y + collision.gameObject.GetComponent<BoxCollider2D>().size.y / 2 <= transform.position.y - bCollider.size.y / 2 && body.velocity.y <= 0)
-            {
-                anim.SetBool("Jump", false);
-                grounded = true;
-            }
+            levelList.LoadCurentLevel();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
-            //levelGenerator.GenerateLevel();   ESTO GENERA UN NIVEL SOBRE EL NIVEL Y POS, NO
+            levelList.LoadCurentLevel();
+        }
 
-            SceneManager.LoadScene("SampleScene");
+        if (collision.gameObject.tag == "Flag")
+        {
+            levelList.GoNextLevel();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "item")
+        if (collision.gameObject.tag == "item")
         {
-            Destroy(collision.gameObject);
-        }
-
-
-        if(collision.gameObject.tag == "Enemy")
-        {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public void SetGroundedState(bool status)
     {
-        List<string> groundTags = new List<string>() { "Ground", "Question" };
-
-        //Dejar el piso
-        if (groundTags.Contains(collision.gameObject.tag))
-        {
-            grounded = false;   
-        }
+        grounded = status;
+        anim.SetBool("Jump", !status);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void SetObstacleState(bool status)
     {
-        List<string> groundTags = new List<string>() { "Ground", "Question" };
-
-        //Obstaculo al frente
-        if (groundTags.Contains(collision.gameObject.tag))
-        {
-            obstacle = true;
-        }
+        obstacle = status;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        List<string> groundTags = new List<string>() { "Ground", "Question" };
-
-        //Obstaculo al frente
-        if (groundTags.Contains(collision.gameObject.tag))
-        {
-            obstacle = false;
-        }
-    }
 
 }

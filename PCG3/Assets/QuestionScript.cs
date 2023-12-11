@@ -23,10 +23,12 @@ public class QuestionScript : MonoBehaviour
 
     public void Hit()
     {
-        if (!anim.GetBool("Hit"))
+        if (!hit)
         {
             anim.SetBool("Hit", true);
             hit = true;
+            GameObject pr = Instantiate(prize, transform.position, transform.rotation);
+            pr.GetComponent<PrizeScript>().SpawnPrize();
         }
     }
 }

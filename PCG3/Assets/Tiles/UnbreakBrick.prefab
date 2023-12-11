@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3647410778950342271}
   - component: {fileID: 7027545402498522789}
   - component: {fileID: 7417079927212694895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UnbreakBrick
   m_TagString: Ground
   m_Icon: {fileID: 0}
