@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L00yL02Sfe3mQl0yDRc2TgLEs34R9yI69NbFWGcWqG0m1wooFiiQgeDYPA2oN9Yr47s/gw2p559g9Y22VP1aPA==",
+  "dgSpecHash": "+o3ZARvlDaTtL5qry9wG89j0Gochqdj+upNsWrPQtLkG9uR0uXVdBdi2lH+kSv64LElGCf3Svg+kYy5p1oJFew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rodri\\Desktop\\LevelBuilder\\LevelBuilder\\LevelBuilder\\LevelBuilder.csproj",
+  "projectFilePath": "C:\\Users\\rodri\\Documents\\GitHub\\PCG_Proyecto3\\LevelBuilder\\LevelBuilder\\LevelBuilder\\LevelBuilder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodri\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
     "C:\\Users\\rodri\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",

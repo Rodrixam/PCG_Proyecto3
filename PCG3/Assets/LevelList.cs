@@ -8,17 +8,16 @@ public class LevelList : MonoBehaviour
     int currentLevel = 0;
 
     [SerializeField] GameObject player;
+    [SerializeField] GameObject cameraObj;
 
     LevelGenerator generator;
 
-    // Start is called before the first frame update
     void Start()
     {
-        generator = new LevelGenerator();
+        generator = GetComponent<LevelGenerator>();
         LoadCurentLevel();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Pasar al siguiente nivel
@@ -46,6 +45,7 @@ public class LevelList : MonoBehaviour
     public void GoNextLevel()
     {
         currentLevel++;
+        if(currentLevel >= list.Count) { currentLevel = 0; }
         LoadCurentLevel();
     }
 
@@ -54,5 +54,6 @@ public class LevelList : MonoBehaviour
         generator.SetLevel(list[currentLevel]);
         generator.GenerateLevel();
         player.transform.position = new Vector3(0,2,0);
+        cameraObj.GetComponent<CameraFollow>().ResetCamera();
     }
 }

@@ -108,7 +108,7 @@ public class Movement : MonoBehaviour
             levelList.LoadCurentLevel();
         }
 
-        if (collision.gameObject.tag == "Flag")
+        if (collision.gameObject.tag == "Finish")
         {
             levelList.GoNextLevel();
         }

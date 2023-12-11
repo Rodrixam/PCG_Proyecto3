@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rodri\\Desktop\\LevelBuilder\\LevelBuilder\\LevelBuilder\\LevelBuilder.csproj",
+      "projectUniqueName": "C:\\Users\\rodri\\Documents\\GitHub\\PCG_Proyecto3\\LevelBuilder\\LevelBuilder\\LevelBuilder\\LevelBuilder.csproj",
       "projectName": "LevelBuilder",
-      "projectPath": "C:\\Users\\rodri\\Desktop\\LevelBuilder\\LevelBuilder\\LevelBuilder\\LevelBuilder.csproj",
+      "projectPath": "C:\\Users\\rodri\\Documents\\GitHub\\PCG_Proyecto3\\LevelBuilder\\LevelBuilder\\LevelBuilder\\LevelBuilder.csproj",
       "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rodri\\Desktop\\LevelBuilder\\LevelBuilder\\LevelBuilder\\obj\\",
+      "outputPath": "C:\\Users\\rodri\\Documents\\GitHub\\PCG_Proyecto3\\LevelBuilder\\LevelBuilder\\LevelBuilder\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -38,7 +38,7 @@ public class LevelGenerator : MonoBehaviour
     //Default
     [SerializeField] GameObject def;
 
-    List<GameObject> levelObjects;
+    List<GameObject> levelObjects = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
