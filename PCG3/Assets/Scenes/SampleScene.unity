@@ -563,7 +563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901337bcee02fe74e975908788616aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTxt: {fileID: 4900000, guid: 7f88c39a46d45bb4c84487ce310058cd, type: 3}
   sky: {fileID: 2031690250}
   unbreakBrick: {fileID: 3508772501382536677, guid: 76fd8924d32e1424fa58b394db837173, type: 3}
   breakBrick: {fileID: 3508772501382536677, guid: 1982567dadd001f498ad6da26e4180bd, type: 3}
@@ -591,8 +590,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8035ed735cba8664d81e129590050b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  list: []
-  player: {fileID: 0}
+  list:
+  - {fileID: 4900000, guid: 3a2d88245e4a0604ea4bf458f26b932f, type: 3}
+  - {fileID: 4900000, guid: ded25460c732db449a86fccdef90f97a, type: 3}
+  - {fileID: 4900000, guid: 4a8403a487c40544fb0b93314d05c70f, type: 3}
+  - {fileID: 4900000, guid: e878c2c0025d21246950c67d469a5143, type: 3}
+  - {fileID: 4900000, guid: ac911be02debbc74a8952ce86639ea60, type: 3}
+  - {fileID: 4900000, guid: b2355f5ca1988364f8af4ca68748b5d6, type: 3}
+  - {fileID: 4900000, guid: 24663c4e208441b409507a03dcf33917, type: 3}
+  - {fileID: 4900000, guid: afa7c101cf30e4a4cb55cf9d9f9b6bab, type: 3}
+  - {fileID: 4900000, guid: c260f9399e0ace540ae4b5bdc3db64e3, type: 3}
+  - {fileID: 4900000, guid: 7dcae04c6935a2c49b0b650a29037093, type: 3}
+  player: {fileID: 1206116438}
+  cameraObj: {fileID: 670213826}
 --- !u!1 &1206116438
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990373a7410ed3949b6b043335ea8ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 0}
+  levelController: {fileID: 912135129}
   maxHspeed: 4
   maxRunSpeed: 8
   acceleration: 0.5

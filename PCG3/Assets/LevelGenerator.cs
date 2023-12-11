@@ -43,7 +43,6 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateLevel();
     }
 
     public void EmptyList()
@@ -54,7 +53,7 @@ public class LevelGenerator : MonoBehaviour
         }
         levelObjects = new List<GameObject>();
     }
-    
+
     public void GenerateLevel()
     {
         int x = 0;
@@ -70,7 +69,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 //Ladrillo Irrompible
                 case 'X':
-                    levelObjects.Add(Instantiate(unbreakBrick, new Vector3(x,y), transform.rotation));
+                    levelObjects.Add(Instantiate(unbreakBrick, new Vector3(x, y), transform.rotation));
                     break;
                 //Ladrillo Rompible
                 case 'S':
@@ -138,8 +137,8 @@ public class LevelGenerator : MonoBehaviour
             rowLength++;
         }
 
-        sky.transform.localScale = new Vector2(levelTxt.text.Length, 15);
-        sky.transform.position = new Vector2(levelTxt.text.Length / 2 - 0.5f, 7);
+        sky.transform.localScale = new Vector2(levelTxt.text.Length, 30);
+        sky.transform.position = new Vector3(levelTxt.text.Length / 2 - 0.5f, 15, 10);
     }
 
     public void SetLevel(TextAsset txt)

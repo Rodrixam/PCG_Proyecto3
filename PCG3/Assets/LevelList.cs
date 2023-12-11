@@ -21,20 +21,20 @@ public class LevelList : MonoBehaviour
     void Update()
     {
         //Pasar al siguiente nivel
-        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.M))
         {
             GoNextLevel();
         }
 
         //Volver al nivel anterior
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.B))
         {
             currentLevel--;
             LoadCurentLevel();
         }
 
         //Recargar nivel
-        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.N))
         {
             currentLevel--;
             LoadCurentLevel();
